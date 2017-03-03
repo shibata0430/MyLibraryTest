@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibTest", "LibTest\LibTest.vcxproj", "{A96ABE97-5185-4E9C-AABE-CB7949F7EA33}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BAC18001-34D8-4BE1-A41A-A5DE16743C18} = {BAC18001-34D8-4BE1-A41A-A5DE16743C18}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyLibrary", "MyLibrary\MyLibrary.vcxproj", "{BAC18001-34D8-4BE1-A41A-A5DE16743C18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{A96ABE97-5185-4E9C-AABE-CB7949F7EA33}.Debug|Win32.Build.0 = Debug|Win32
 		{A96ABE97-5185-4E9C-AABE-CB7949F7EA33}.Release|Win32.ActiveCfg = Release|Win32
 		{A96ABE97-5185-4E9C-AABE-CB7949F7EA33}.Release|Win32.Build.0 = Release|Win32
+		{BAC18001-34D8-4BE1-A41A-A5DE16743C18}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BAC18001-34D8-4BE1-A41A-A5DE16743C18}.Debug|Win32.Build.0 = Debug|Win32
+		{BAC18001-34D8-4BE1-A41A-A5DE16743C18}.Release|Win32.ActiveCfg = Release|Win32
+		{BAC18001-34D8-4BE1-A41A-A5DE16743C18}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
