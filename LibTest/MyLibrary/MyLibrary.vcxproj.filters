@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Library">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Library\InputDvice">
+      <UniqueIdentifier>{aaed0762-8042-4f69-b00a-a524d8ca4b43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\DirectX9">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Library\SoundInterface">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Library\TextureFileManager">
+      <UniqueIdentifier>{93508dab-db3e-41f9-889b-2f2eaef0435c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\TextureFileManager\TextureFile">
+      <UniqueIdentifier>{02c66259-2d14-4a06-8329-64e8b39e3a56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\SoundFileManager">
+      <UniqueIdentifier>{ba1c34b1-908b-4d81-9953-05aa74f50ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\SoundFileManager\SoundFile">
+      <UniqueIdentifier>{cb538a3c-cfa3-480a-a04d-fc052c0bc2e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\VerticesManager">
+      <UniqueIdentifier>{7926de6b-4835-4c92-af05-c05ca46f6553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\VerticesManager\Vertices">
+      <UniqueIdentifier>{10a3bbd3-860a-459a-9f79-b5831f3f7659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\XFileManager">
+      <UniqueIdentifier>{4e46d3e9-0073-464a-9418-503fbf15d686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\XFileManager\XFile">
+      <UniqueIdentifier>{a9cda841-7ac6-4570-9d9b-3f3abf1973e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\DebugSystem">
+      <UniqueIdentifier>{52ad21a9-b71f-4a98-8686-1c5701672515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Window">
+      <UniqueIdentifier>{127cada1-9efb-4268-9b03-f790bf2a1e15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\InputManager">
+      <UniqueIdentifier>{7669550e-2e22-4460-9ef5-c0a7d4554915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\InputManager\InputKey">
+      <UniqueIdentifier>{96eb70fe-6c89-4763-9aae-07324d1903e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Library.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectX9.cpp">
+      <Filter>Library\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\InputDvice.cpp">
+      <Filter>Library\InputDvice</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\SoundInterface.cpp">
+      <Filter>Library\SoundInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\TextureFile.cpp">
+      <Filter>Library\TextureFileManager\TextureFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\TextureFileManager.cpp">
+      <Filter>Library\TextureFileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\SoundFile.cpp">
+      <Filter>Library\SoundFileManager\SoundFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\SoundFileManager.cpp">
+      <Filter>Library\SoundFileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Vertices.cpp">
+      <Filter>Library\VerticesManager\Vertices</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\VerticesManager.cpp">
+      <Filter>Library\VerticesManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\XFile.cpp">
+      <Filter>Library\XFileManager\XFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\XFileManager.cpp">
+      <Filter>Library\XFileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Window.cpp">
+      <Filter>Library\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DebugSystem.cpp">
+      <Filter>Library\DebugSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\InputManager.cpp">
+      <Filter>Library\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\InputKey.cpp">
+      <Filter>Library\InputManager\InputKey</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Library.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DirectX9.h">
+      <Filter>Library\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\InputDvice.h">
+      <Filter>Library\InputDvice</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\SoundInterface.h">
+      <Filter>Library\SoundInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\TextureFile.h">
+      <Filter>Library\TextureFileManager\TextureFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\TextureFileManager.h">
+      <Filter>Library\TextureFileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\SoundFile.h">
+      <Filter>Library\SoundFileManager\SoundFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\SoundFileManager.h">
+      <Filter>Library\SoundFileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Vertices.h">
+      <Filter>Library\VerticesManager\Vertices</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\VerticesManager.h">
+      <Filter>Library\VerticesManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\XFile.h">
+      <Filter>Library\XFileManager\XFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\XFileManager.h">
+      <Filter>Library\XFileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Window.h">
+      <Filter>Library\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DebugSystem.h">
+      <Filter>Library\DebugSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchMemoryLeak.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\InputManager.h">
+      <Filter>Library\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\InputKey.h">
+      <Filter>Library\InputManager\InputKey</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
