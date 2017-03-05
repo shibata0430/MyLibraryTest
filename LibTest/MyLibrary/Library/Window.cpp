@@ -114,7 +114,7 @@ void Window::Create(LPCTSTR titleName_, int clientWidth_, int clientHeiht_, bool
 	ShowWindow(m_hWnd, SW_SHOW);
 	UpdateWindow(m_hWnd);
 
-//	ZeroMemory(&m_msg, sizeof(m_msg));
+ 	ZeroMemory(&m_msg, sizeof(m_msg));
 }
 
 bool Window::Update()
