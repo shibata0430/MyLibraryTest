@@ -20,9 +20,6 @@ public:
 private:
 	void Control();
 	void Draw();
-
-private:
-	Object*		m_pObject;
 };
 
 #endif // !OBJECTMANAGER_H

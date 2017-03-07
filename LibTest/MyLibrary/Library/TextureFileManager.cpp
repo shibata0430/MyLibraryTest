@@ -15,7 +15,7 @@ TextureFileManager::TextureFileManager()
 
 TextureFileManager::~TextureFileManager()
 {
-	Release();
+	ReleaseAllTexture();
 }
 
 void TextureFileManager::LoadTextureFile(int index_, const char* filePath_)
@@ -35,7 +35,7 @@ LPDIRECT3DTEXTURE9 TextureFileManager::GetTextureFileData(int index_)
 	return m_pTextureFile[index_]->GetTextureFileData();
 }
 
-void TextureFileManager::Release()
+void TextureFileManager::ReleaseAllTexture()
 {
 	for (unsigned int i = 0; i < m_pTextureFile.size(); i++)
 	{

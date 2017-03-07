@@ -49,7 +49,7 @@ public:
 	LPDIRECT3DTEXTURE9 GetTextureFileData(int index_);
 
 	/**解放関数*/
-	void Release();
+	void ReleaseAllTexture();
 
 private:
 	std::vector<TextureFile*> m_pTextureFile;

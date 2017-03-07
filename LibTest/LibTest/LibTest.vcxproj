@@ -11,15 +11,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="App\Application.cpp" />
+    <ClCompile Include="Background\Backgoround.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="Object\Object.cpp" />
+    <ClCompile Include="Object\ObjectManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="App\Application.h" />
+    <ClInclude Include="Background\Backgoround.h" />
+    <ClInclude Include="Object\Object.h" />
+    <ClInclude Include="Object\ObjectManager.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A96ABE97-5185-4E9C-AABE-CB7949F7EA33}</ProjectGuid>

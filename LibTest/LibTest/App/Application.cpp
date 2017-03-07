@@ -30,11 +30,6 @@ bool Application::Run()
 void Application::Control()
 {
 	m_rLibrary.UpdateDI();
-
-	if (m_rLibrary.CheckKey(DIK_A) == ON)
-	{
-		m_isGameEnd = true;
-	}
 }
 
 void Application::Render()

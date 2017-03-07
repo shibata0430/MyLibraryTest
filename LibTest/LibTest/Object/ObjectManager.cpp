@@ -21,3 +21,13 @@ void ObjectManager::Run()
 {
 	
 }
+
+void ObjectManager::Control()
+{
+
+}
+
+void ObjectManager::Draw()
+{
+
+}

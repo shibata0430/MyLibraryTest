@@ -16,29 +16,38 @@
     <Filter Include="main\Application\Object">
       <UniqueIdentifier>{d83cffe4-a278-488b-92f7-681a5dc273c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="main\Application\Object\Backgoround">
+      <UniqueIdentifier>{d7fc846c-a93f-4f90-80c5-092981999de7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
     </ClCompile>
-    <ClCompile Include="Application.cpp">
+    <ClCompile Include="App\Application.cpp">
       <Filter>main\Application</Filter>
     </ClCompile>
-    <ClCompile Include="Object.cpp">
+    <ClCompile Include="Background\Backgoround.cpp">
+      <Filter>main\Application\Object\Backgoround</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Object.cpp">
       <Filter>main\Application\Object</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectManager.cpp">
+    <ClCompile Include="Object\ObjectManager.cpp">
       <Filter>main\Application\Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h">
+    <ClInclude Include="App\Application.h">
       <Filter>main\Application</Filter>
     </ClInclude>
-    <ClInclude Include="Object.h">
+    <ClInclude Include="Background\Backgoround.h">
+      <Filter>main\Application\Object\Backgoround</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Object.h">
       <Filter>main\Application\Object</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectManager.h">
+    <ClInclude Include="Object\ObjectManager.h">
       <Filter>main\Application\Object</Filter>
     </ClInclude>
   </ItemGroup>
