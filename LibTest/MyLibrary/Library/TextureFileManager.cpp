@@ -43,3 +43,13 @@ void TextureFileManager::ReleaseAllTexture()
 	}
 	std::vector<TextureFile*>().swap(m_pTextureFile);
 }
+
+void TextureFileManager::ReleaseTexture(int index_)
+{
+	if (m_pTextureFile[index_] != NULL)
+	{
+		delete m_pTextureFile[index_];
+		m_pTextureFile.clear();
+		m_pTextureFile.shrink_to_fit();
+	}
+}

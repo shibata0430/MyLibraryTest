@@ -43,8 +43,14 @@ public:
 	*/
 	void SoundState(int index_, SoundMode soundMode_);
 
-	/**解放関数*/
-	void Release();
+	/**全てのサウンドデータの解放関数*/
+	void ReleaseAllSoundData();
+
+	/**
+	 * 一部のサウンドデータの解放関数
+	 * @param [in] index_	解放する配列番号
+	 */
+	void ReleaseSoundData(int index_);
 
 private:
 	std::vector<SoundFile*>	m_pSoundFile;

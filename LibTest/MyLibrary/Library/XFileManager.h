@@ -38,8 +38,14 @@ public:
 	*/
 	LPD3DXMESH GetMeshData(int index_);
 
-	/**解放関数*/
-	void Release();
+	/**全てのXファイルの解放関数*/
+	void ReleaseAllXFile();
+
+	/**
+	 * 一部のXファイルの解放関数
+	 * @param [in] index_	解放する配列番号
+	 */
+	void ReleaseXFile(int index_);
 
 private:
 	std::vector<XFile*>	m_pXFile;

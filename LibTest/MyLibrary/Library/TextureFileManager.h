@@ -48,8 +48,14 @@ public:
 	*/
 	LPDIRECT3DTEXTURE9 GetTextureFileData(int index_);
 
-	/**解放関数*/
+	/**全てのテクスチャの解放関数*/
 	void ReleaseAllTexture();
+
+	/**
+	 * 一部のテクスチャの解放関数
+	 * @param [in] index_	解放する配列番号
+	 */
+	void ReleaseTexture(int index_);
 
 private:
 	std::vector<TextureFile*> m_pTextureFile;

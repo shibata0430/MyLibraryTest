@@ -1,7 +1,7 @@
 ﻿/**
- * @file	
- * @breif	
- * @author	
+ * @file	SearchMemoryLeak.h
+ * @breif	メモリリークの場所を教えてくれる定義ヘッダ
+ * @author	shibata
  */
 
 #ifndef SEARCHLEAK_H

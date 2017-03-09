@@ -15,7 +15,7 @@ SoundFileManager::SoundFileManager()
 
 SoundFileManager::~SoundFileManager()
 {
-	Release();
+	ReleaseAllSoundData();
 }
 
 void SoundFileManager::LoadSoundFile(int index_, const char* filePath_)
@@ -54,11 +54,21 @@ void SoundFileManager::SoundState(int index_, SoundMode soundMode_)
 	}
 }
 
-void SoundFileManager::Release()
+void SoundFileManager::ReleaseAllSoundData()
 {
 	for (unsigned int i = 0; i < m_pSoundFile.size(); i++)
 	{
 		delete m_pSoundFile[i];
 	}
 	std::vector<SoundFile*>().swap(m_pSoundFile);
+}
+
+void SoundFileManager::ReleaseSoundData(int index_)
+{
+	if (m_pSoundFile[index_] != NULL)
+	{
+		delete m_pSoundFile[index_];
+		m_pSoundFile.clear();
+		m_pSoundFile.shrink_to_fit();
+	}
 }

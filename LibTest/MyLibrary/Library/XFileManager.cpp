@@ -15,7 +15,7 @@ XFileManager::XFileManager()
 
 XFileManager::~XFileManager()
 {
-	Release();
+	ReleaseAllXFile();
 }
 
 void XFileManager::LoadXFile(int index_, const char* filePath_)
@@ -34,11 +34,21 @@ LPD3DXMESH XFileManager::GetMeshData(int index_)
 	return m_pXFile[index_]->GetMeshData();
 }
 
-void XFileManager::Release()
+void XFileManager::ReleaseAllXFile()
 {
 	for (unsigned int i = 0; i < m_pXFile.size(); i++)
 	{
 		delete m_pXFile[i];
 	}
 	std::vector<XFile*>().swap(m_pXFile);
+}
+
+void XFileManager::ReleaseXFile(int index_)
+{
+	if (m_pXFile[index_] != NULL)
+	{
+		delete m_pXFile[index_];
+		m_pXFile.clear();
+		m_pXFile.shrink_to_fit();
+	}
 }

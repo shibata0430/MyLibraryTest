@@ -68,8 +68,14 @@ public:
 	*/
 	void SetColor(int index_, DWORD color_, int alpha_, int red_, int green_, int blue_);
 
-	/**解放関数*/
-	void Release();
+	/**全ての頂点データの解放関数*/
+	void ReleaseAllVirtices();
+
+	/**
+	 * 一部の頂点データの解放関数
+	 * @param [in] index_	解放する配列番号
+	 */
+	void ReleaseVirtices(int index_);
 
 private:
 	std::vector<Vertices*>	m_pVertices;

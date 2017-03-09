@@ -117,9 +117,14 @@ void Library::LoadTextuerMoreInfo(int index_, const char* filePath_, int alpha_,
 	m_pTextureFileManager->LoadTextuerMoreInfo(index_, filePath_, alpha_, red_, green_, blue_, isTwoPower_);
 }
 
-void Library::ReleaseTexture()
+void Library::ReleaseAllTexture()
 {
-	m_pTextureFileManager->Release();
+	m_pTextureFileManager->ReleaseAllTexture();
+}
+
+void Library::ReleaseTexture(int index_)
+{
+	m_pTextureFileManager->ReleaseTexture(index_);
 }
 
 //---------------------VerticesManagerクラスのパブリック関数-------------------------
@@ -143,9 +148,14 @@ void Library::SetColor(int index_, DWORD color_, int alpha_, int red_, int green
 	m_pVerticesManager->SetColor(index_, color_, alpha_, red_, green_, blue_);
 }
 
-void Library::ReleaseVertices()
+void Library::ReleaseAllVirtices()
 {
-	m_pVerticesManager->Release();
+	m_pVerticesManager->ReleaseAllVirtices();
+}
+
+void Library::ReleaseVirtices(int index_)
+{
+	m_pVerticesManager->ReleaseVirtices(index_);
 }
 
 //---------------------SoundFileManagerクラスのパブリック関数--------------------------
@@ -159,9 +169,14 @@ void Library::SoundState(int index_, SoundMode soundMode_)
 	m_pSoundFileManager->SoundState(index_, static_cast<SoundFileManager::SoundMode>(soundMode_));
 }
 
-void Library::ReleaseSound()
+void Library::ReleaseAllSoundData()
 {
-	m_pSoundFileManager->Release();
+	m_pSoundFileManager->ReleaseAllSoundData();
+}
+
+void Library::ReleaseSoundData(int index_)
+{
+	m_pSoundFileManager->ReleaseSoundData(index_);
 }
 
 //-------------------XFileManagerクラスのパブリック関数--------------------------------
@@ -175,9 +190,14 @@ void Library::DrawXFile(int index_)
 	m_pXFileManager->DrawXFile(index_);
 }
 
-void Library::ReleaseXFile()
+void Library::ReleaseAllXFile()
 {
-	m_pXFileManager->Release();
+	m_pXFileManager->ReleaseAllXFile();
+}
+
+void Library::ReleaseXFile(int index_)
+{
+	m_pXFileManager->ReleaseXFile(index_);
 }
 
 void Library::CheckMemoryLeaK()

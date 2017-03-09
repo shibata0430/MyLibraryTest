@@ -132,8 +132,14 @@ public:		// TextureFileManagerクラスのパブリック関数
 	*/
 	void LoadTextuerMoreInfo(int index_, const char* filePath_, int alpha_ = 255, int red_ = 255, int green_ = 255, int blue_ = 255, bool isTwoPower_ = true);
 
-	/**解放関数*/
-	void ReleaseTexture();
+	/**全てのテクスチャの解放関数*/
+	void ReleaseAllTexture();
+
+	/**
+	* 一部のテクスチャの解放関数
+	* @param [in] index_	解放する配列番号
+	*/
+	void ReleaseTexture(int index_);
 
 public:		// VerticesManagerのパブリック関数
 	/**
@@ -180,8 +186,14 @@ public:		// VerticesManagerのパブリック関数
 	*/
 	void SetColor(int index_, DWORD color_, int alpha_ = 255, int red_ = 255, int green_ = 255, int blue_ = 255);
 
-	/**解放関数*/
-	void ReleaseVertices();
+	/**全ての頂点データの解放関数*/
+	void ReleaseAllVirtices();
+
+	/**
+	* 一部の頂点データの解放関数
+	* @param [in] index_	解放する配列番号
+	*/
+	void ReleaseVirtices(int index_);
 
 public:		// SoundFileManagerクラスのパブリック関数
 	/**
@@ -198,8 +210,14 @@ public:		// SoundFileManagerクラスのパブリック関数
 	*/
 	void SoundState(int index_, SoundMode soundMode_);
 
-	/**解放関数*/
-	void ReleaseSound();
+	/**全てのサウンドデータの解放関数*/
+	void ReleaseAllSoundData();
+
+	/**
+	* 一部のサウンドデータの解放関数
+	* @param [in] index_	解放する配列番号
+	*/
+	void ReleaseSoundData(int index_);
 
 public:		// XFileManagerクラスのパブリック関数
 	/**
@@ -215,8 +233,14 @@ public:		// XFileManagerクラスのパブリック関数
 	*/
 	void DrawXFile(int index_);
 
-	/**解放関数*/
-	void ReleaseXFile();
+	/**全てのXファイルの解放関数*/
+	void ReleaseAllXFile();
+
+	/**
+	* 一部のXファイルの解放関数
+	* @param [in] index_	解放する配列番号
+	*/
+	void ReleaseXFile(int index_);
 
 public:		// DebugSystemクラスのパブリック関数
 	/**メモリリークを発見する関数*/
