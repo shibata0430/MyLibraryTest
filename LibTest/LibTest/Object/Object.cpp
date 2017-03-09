@@ -17,8 +17,3 @@ Object::~Object()
 {
 
 }
-
-void Object::Run()
-{
-
-}

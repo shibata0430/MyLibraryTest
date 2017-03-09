@@ -15,10 +15,8 @@ public:
 	Background();
 	~Background();
 
-	virtual void Run();
-
-private:
-	void Draw();
+	virtual void Control();
+	virtual void Draw();
 };
 
 #endif // !BACKGROUND_H

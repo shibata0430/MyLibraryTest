@@ -6,28 +6,36 @@
 
 #include "ObjectManager.h"
 #include "Object.h"
+#include "../Background/Backgoround.h"
+#include <Library.h>
 
-ObjectManager::ObjectManager()
+ObjectManager::ObjectManager() : 
+m_pBackground(New Background)
 {
 
 }
 
 ObjectManager::~ObjectManager()
 {
-
-}
-
-void ObjectManager::Run()
-{
-	
+	delete m_pBackground;
 }
 
 void ObjectManager::Control()
 {
+	Object* pObjectList[1] = { m_pBackground };
 
+	for (int i = 0; i < 1; i++)
+	{
+		pObjectList[i]->Control();
+	}
 }
 
 void ObjectManager::Draw()
 {
+	Object* pObjectList[1] = { m_pBackground };
 
+	for (int i = 0; i < 1; i++)
+	{
+		pObjectList[i]->Draw();
+	}
 }

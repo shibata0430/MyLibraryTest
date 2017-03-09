@@ -20,10 +20,11 @@ public:
 	Object();
 	~Object();
 
-	virtual void Run() = 0;
+	virtual void Control() = 0;
+	virtual void Draw()    = 0;
 
 protected:
-	Library&	m_rlibrary;
+	Library&				m_rlibrary;
 };
 
 #endif // !OBJECT_H

@@ -8,6 +8,7 @@
 #define APPLICATION_H
 
 class Library;
+class ObjectManager;
 
 class Application
 {
@@ -22,8 +23,9 @@ private:
 	void Render();
 
 private:
-	Library&	m_rLibrary;
-	bool		m_isGameEnd;
+	Library&			m_rLibrary;
+	ObjectManager*		m_pObjectManager;
+	bool				m_isGameEnd;
 };
 
 #endif // !APPLICATION_H
