@@ -9,9 +9,11 @@
 
 class Library;
 
-enum
+enum Texture
 {
 	BACKGROUND_TEX,
+	MEET_TEX,
+
 };
 
 class Object

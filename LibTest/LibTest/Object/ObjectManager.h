@@ -8,6 +8,7 @@
 #define OBJECTMANAGER_H
 
 class Background;
+class Meet;
 
 class ObjectManager
 {
@@ -20,6 +21,8 @@ public:
 
 private:
 	Background*		m_pBackground;
+	Meet*			m_pMeet;
+
 };
 
 #endif // !OBJECTMANAGER_H

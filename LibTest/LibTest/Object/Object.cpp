@@ -15,5 +15,7 @@ m_rlibrary(Library::Instace())
 
 Object::~Object()
 {
+	m_rlibrary.ReleaseAllTexture();
+	m_rlibrary.ReleaseAllVirtices();
 
 }

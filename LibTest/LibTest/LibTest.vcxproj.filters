@@ -19,6 +19,12 @@
     <Filter Include="main\Application\Object\Backgoround">
       <UniqueIdentifier>{d7fc846c-a93f-4f90-80c5-092981999de7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="main\Application\Object\Meet">
+      <UniqueIdentifier>{f53e9395-8597-4916-a128-d27a3de76ae2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Application\Object\Player">
+      <UniqueIdentifier>{6470f390-5c18-4451-bf17-c5636d8c6b03}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +42,9 @@
     <ClCompile Include="Object\ObjectManager.cpp">
       <Filter>main\Application\Object</Filter>
     </ClCompile>
+    <ClCompile Include="Meet\Meet.cpp">
+      <Filter>main\Application\Object\Meet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App\Application.h">
@@ -49,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="Object\ObjectManager.h">
       <Filter>main\Application\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Meet\Meet.h">
+      <Filter>main\Application\Object\Meet</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

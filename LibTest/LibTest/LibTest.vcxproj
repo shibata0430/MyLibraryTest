@@ -14,12 +14,14 @@
     <ClCompile Include="App\Application.cpp" />
     <ClCompile Include="Background\Backgoround.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Meet\Meet.cpp" />
     <ClCompile Include="Object\Object.cpp" />
     <ClCompile Include="Object\ObjectManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App\Application.h" />
     <ClInclude Include="Background\Backgoround.h" />
+    <ClInclude Include="Meet\Meet.h" />
     <ClInclude Include="Object\Object.h" />
     <ClInclude Include="Object\ObjectManager.h" />
   </ItemGroup>

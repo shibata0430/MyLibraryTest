@@ -7,10 +7,12 @@
 #include "ObjectManager.h"
 #include "Object.h"
 #include "../Background/Backgoround.h"
+#include "../Meet/Meet.h"
 #include <Library.h>
 
 ObjectManager::ObjectManager() : 
-m_pBackground(New Background)
+m_pBackground(New Background),
+m_pMeet(New Meet)
 {
 
 }
@@ -18,13 +20,17 @@ m_pBackground(New Background)
 ObjectManager::~ObjectManager()
 {
 	delete m_pBackground;
+	delete m_pMeet;
 }
 
 void ObjectManager::Control()
 {
-	Object* pObjectList[1] = { m_pBackground };
+	Object* pObjectList[2] = 
+	{ 
+		m_pBackground, m_pMeet
+	};
 
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < 2; i++)
 	{
 		pObjectList[i]->Control();
 	}
@@ -32,9 +38,12 @@ void ObjectManager::Control()
 
 void ObjectManager::Draw()
 {
-	Object* pObjectList[1] = { m_pBackground };
+	Object* pObjectList[2] = 
+	{
+		m_pBackground, m_pMeet
+	};
 
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < 2; i++)
 	{
 		pObjectList[i]->Draw();
 	}

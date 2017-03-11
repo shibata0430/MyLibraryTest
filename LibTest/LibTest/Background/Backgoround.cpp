@@ -23,8 +23,6 @@ Background::Background()
 
 Background::~Background()
 {
-	m_rlibrary.ReleaseTexture(BACKGROUND_TEX);
-	m_rlibrary.ReleaseVirtices(BACKGROUND_TEX);
 }
 
 void Background::Control()
