@@ -187,3 +187,7 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+LibTest/.vs/LibTest/v15/Browse.VC.db
+LibTest/.vs/LibTest/v15/Solution.VC.db
+LibTest/.vs/LibTest/v15/Solution.VC.db-shm
+LibTest/.vs/LibTest/v15/Solution.VC.db-wal
