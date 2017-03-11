@@ -15,6 +15,7 @@
 #include "Library\SoundFileManager.h"
 #include "Library\XFileManager.h"
 #include "Library\DebugSystem.h"
+#include "Library\Font.h"
 
 Library::Library() :
 m_pDirectX9(NULL),
@@ -200,6 +201,20 @@ void Library::ReleaseXFile(int index_)
 	m_pXFileManager->ReleaseXFile(index_);
 }
 
+//--------------------------Fontクラスのパブリック関数-----------------------------------
+void Library::DrawFont(const char* pString_, float posX_, float posY_, DWORD format_, int red_, int green_, int blue_)
+{
+	Font font;
+	font.DrawFont(pString_, D3DXVECTOR2(posX_, posY_), format_, red_, green_, blue_);
+}
+
+void Library::DrawFont(int width_, int height_, const char* pString_, float posX_, float posY_, DWORD format_, int red_, int green_, int blue_)
+{
+	Font font(width_, height_);
+	font.DrawFont(pString_, D3DXVECTOR2(posX_, posY_), format_, red_, green_, blue_);
+}
+
+//-----------------------DebugSystemのパブリック関数-----------------------------------
 void Library::CheckMemoryLeaK()
 {
 	DebugSystem debugSystem;

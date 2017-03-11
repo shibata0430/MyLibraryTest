@@ -9,7 +9,7 @@
 
 TextureFile::TextureFile() : 
 m_pTexture(NULL),
-m_pD3Device(DirectX9::Instance().GetDevice())
+m_pGraphicsDevice(DirectX9::Instance().GetDevice())
 {
 
 }
@@ -22,7 +22,7 @@ TextureFile::~TextureFile()
 
 bool TextureFile::LoadTextureFile(const char* filePath_)
 {
-	if (FAILED(D3DXCreateTextureFromFile(m_pD3Device, filePath_, &m_pTexture)))
+	if (FAILED(D3DXCreateTextureFromFile(m_pGraphicsDevice, filePath_, &m_pTexture)))
 	{
 		MessageBox(NULL, "画像が読み込めませんでした。", NULL, MB_OK);
 		return false;
@@ -35,7 +35,7 @@ bool TextureFile::LoadTextuerMoreInfo(const char* filePath_, D3DXCOLOR color, bo
 	if (isTwoPower_)	// 2の累乗なら
 	{
 		if (D3DXCreateTextureFromFileEx(
-			m_pD3Device,
+			m_pGraphicsDevice,
 			filePath_,
 			D3DX_DEFAULT,
 			D3DX_DEFAULT,
@@ -58,7 +58,7 @@ bool TextureFile::LoadTextuerMoreInfo(const char* filePath_, D3DXCOLOR color, bo
 	else			// 2の累乗でないのなら
 	{
 		if (FAILED(D3DXCreateTextureFromFileEx(
-			m_pD3Device,
+			m_pGraphicsDevice,
 			filePath_,
 			D3DX_DEFAULT_NONPOW2,
 			D3DX_DEFAULT_NONPOW2,

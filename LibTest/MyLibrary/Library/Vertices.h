@@ -71,15 +71,15 @@ public:
 	void SetColor(DWORD color_, int alpha_, int red_, int green_, int blue_);
 
 private:
-	LPDIRECT3DDEVICE9	m_pD3Device;	//!< DirectX9から取ってきたデバイス
-	DWORD				m_colors[4];	//!< テクスチャの色
-	float				m_texWidth;		//!< テクスチャの幅
-	float				m_texHeight;	//!< テクスチャの高さ
-	float				m_texDepth;		//!< テクスチャの奥行き
-	float				m_texMaxTu;		//!< テクスチャのX軸最大座標
-	float				m_texMaxTv;		//!< テクスチャのY軸最大座標
-	float				m_texMinTu;		//!< テクスチャのX軸最小座標
-	float				m_texMinTv;		//!< テクスチャのY軸最小座標
+	LPDIRECT3DDEVICE9	m_pGraphicsDevice;	//!< DirectX9から取ってきたデバイス
+	DWORD				m_colors[4];		//!< テクスチャの色
+	float				m_texWidth;			//!< テクスチャの幅
+	float				m_texHeight;		//!< テクスチャの高さ
+	float				m_texDepth;			//!< テクスチャの奥行き
+	float				m_texMaxTu;			//!< テクスチャのX軸最大座標
+	float				m_texMaxTv;			//!< テクスチャのY軸最大座標
+	float				m_texMinTu;			//!< テクスチャのX軸最小座標
+	float				m_texMinTv;			//!< テクスチャのY軸最小座標
 };
 
 #endif // !VERTICES_H

@@ -8,7 +8,7 @@
 #include "DirectX9.h"
 
 Vertices::Vertices() :
-m_pD3Device(DirectX9::Instance().GetDevice()),
+m_pGraphicsDevice(DirectX9::Instance().GetDevice()),
 m_texWidth(NULL),
 m_texHeight(NULL),
 m_texDepth(NULL),
@@ -55,8 +55,8 @@ void Vertices::DrawLeftTop(D3DXVECTOR2 position_, LPDIRECT3DTEXTURE9 pTextureDat
 		vertex[i].y += position_.y;
 	}
 
-	m_pD3Device->SetTexture(0, pTextureData_);
-	m_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, vertex, sizeof(CUSTOMVERTEX));
+	m_pGraphicsDevice->SetTexture(0, pTextureData_);
+	m_pGraphicsDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, vertex, sizeof(CUSTOMVERTEX));
 }
 
 void Vertices::DrawCenter(D3DXVECTOR2 position_, LPDIRECT3DTEXTURE9 pTextureData_)
@@ -75,8 +75,8 @@ void Vertices::DrawCenter(D3DXVECTOR2 position_, LPDIRECT3DTEXTURE9 pTextureData
 		vertex[i].y += position_.y;
 	}
 
-	m_pD3Device->SetTexture(0, pTextureData_);
-	m_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, vertex, sizeof(CUSTOMVERTEX));
+	m_pGraphicsDevice->SetTexture(0, pTextureData_);
+	m_pGraphicsDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, vertex, sizeof(CUSTOMVERTEX));
 
 }
 

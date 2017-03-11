@@ -242,6 +242,37 @@ public:		// XFileManagerクラスのパブリック関数
 	*/
 	void ReleaseXFile(int index_);
 
+public:		// Fontクラスのパブリック関数
+	/**
+	* 文字を描画する関数
+	* @param [in] pString_		描画する文字列
+	* @param [in] posX_			描画する文字のX座標
+	* @param [in] posY_			描画する文字のY座標
+	* @param [in] format_		文字のフォーマット
+	* @param [in] red_			文字のR値
+	* @param [in] green_		文字のG値
+	* @param [in] blue_			文字のB値
+	* @note format_のデフォルト値は左寄せ
+	* @note RGBのデフォルト値は255
+	*/
+	void DrawFont(const char* pString_, float posX_, float posY_, DWORD format_ = DT_LEFT, int red_ = 255, int green_ = 255, int blue_ = 255);
+
+	/**
+	* 文字を描画する関数
+	* @param [in] width_		文字の幅
+	* @param [in] height_		文字の高さ
+	* @param [in] pString_		描画する文字列
+	* @param [in] posX_			描画する文字のX座標
+	* @param [in] posY_			描画する文字のY座標
+	* @param [in] format_		文字のフォーマット
+	* @param [in] red_			文字のR値
+	* @param [in] green_		文字のG値
+	* @param [in] blue_			文字のB値
+	* @note format_のデフォルト値は左寄せ
+	* @note RGBのデフォルト値は255
+	*/
+	void DrawFont(int width_, int height_, const char* pString_, float posX_, float posY_, DWORD format_ = DT_LEFT, int red_ = 255, int green_ = 255, int blue_ = 255);
+
 public:		// DebugSystemクラスのパブリック関数
 	/**メモリリークを発見する関数*/
 	void CheckMemoryLeaK();

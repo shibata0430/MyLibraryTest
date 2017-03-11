@@ -48,8 +48,8 @@ public:
 	}
 
 private:
-	LPDIRECT3DTEXTURE9	m_pTexture;		//!< DirectXのテクスチャインターフェイス
-	LPDIRECT3DDEVICE9	m_pD3Device;	//!< DirectX9から取ってきたデバイス
+	LPDIRECT3DTEXTURE9	m_pTexture;			//!< DirectXのテクスチャインターフェイス
+	LPDIRECT3DDEVICE9	m_pGraphicsDevice;	//!< DirectX9から取ってきたデバイス
 };
 
 #endif // !TEXTUREFILE_H

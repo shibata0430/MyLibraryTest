@@ -74,6 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Library\Font.cpp" />
     <ClCompile Include="Library\DebugSystem.cpp" />
     <ClCompile Include="Library\DirectX9.cpp" />
     <ClCompile Include="Library.cpp" />
@@ -92,6 +93,7 @@
     <ClCompile Include="Library\XFileManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Library\Font.h" />
     <ClInclude Include="Library\DebugSystem.h" />
     <ClInclude Include="Library\InputKey.h" />
     <ClInclude Include="Library\InputManager.h" />
