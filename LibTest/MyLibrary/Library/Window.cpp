@@ -7,6 +7,8 @@
 #include "Window.h"
 
 Window::Window() :
+m_clientWidth(0.0f),
+m_clientHeight(0.0f),
 m_hWnd(NULL)
 {
 
@@ -39,8 +41,11 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 	return DefWindowProc(hWnd, iMsg, wParam, lParam);
 }
 
-void Window::Create(LPCTSTR titleName_, int clientWidth_, int clientHeiht_, bool isFullScreen_)
+void Window::Create(const char* titleName_, float clientWidth_, float clientHeiht_, bool isFullScreen_)
 {
+	m_clientWidth	= clientWidth_;
+	m_clientHeight	= clientHeiht_;
+
 	// ウィンドウ登録クラス
 	WNDCLASSEX windowClass;
 	{
@@ -68,8 +73,8 @@ void Window::Create(LPCTSTR titleName_, int clientWidth_, int clientHeiht_, bool
 			WS_POPUP | WS_VISIBLE,
 			0,
 			0,
-			clientWidth_,
-			clientHeiht_,
+			m_clientWidth,
+			m_clientHeight,
 			NULL,
 			NULL,
 			GetModuleHandle(NULL),
@@ -84,8 +89,8 @@ void Window::Create(LPCTSTR titleName_, int clientWidth_, int clientHeiht_, bool
 			WS_OVERLAPPEDWINDOW | WS_VISIBLE,
 			CW_USEDEFAULT,
 			CW_USEDEFAULT,
-			clientWidth_,
-			clientHeiht_,
+			m_clientWidth,
+			m_clientHeight,
 			NULL,
 			NULL,
 			GetModuleHandle(NULL),
@@ -97,16 +102,16 @@ void Window::Create(LPCTSTR titleName_, int clientWidth_, int clientHeiht_, bool
 		{
 			GetClientRect(m_hWnd, &clientRect);
 
-			clientWidth_ = clientWidth_ + (clientWidth_ - clientRect.right);
-			clientHeiht_ = clientHeiht_ + (clientHeiht_ - clientRect.bottom);
+			m_clientWidth  = m_clientWidth  + (m_clientWidth  - clientRect.right);
+			m_clientHeight = m_clientHeight + (m_clientHeight - clientRect.bottom);
 		}
 
 		MoveWindow(
 			m_hWnd,
 			0,
 			0,
-			clientWidth_,
-			clientHeiht_,
+			m_clientWidth,
+			m_clientHeight,
 			TRUE
 			);
 	}
