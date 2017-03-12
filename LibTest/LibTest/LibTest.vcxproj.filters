@@ -45,6 +45,9 @@
     <ClCompile Include="Meet\Meet.cpp">
       <Filter>main\Application\Object\Meet</Filter>
     </ClCompile>
+    <ClCompile Include="Player\Player.cpp">
+      <Filter>main\Application\Object\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App\Application.h">
@@ -61,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="Meet\Meet.h">
       <Filter>main\Application\Object\Meet</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\Player.h">
+      <Filter>main\Application\Object\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
