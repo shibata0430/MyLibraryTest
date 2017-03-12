@@ -16,6 +16,7 @@
 #include "Library\XFileManager.h"
 #include "Library\DebugSystem.h"
 #include "Library\Font.h"
+#include "Library\CameraSetting.h"
 
 Library::Library() :
 m_pDirectX9(NULL),
@@ -26,7 +27,8 @@ m_pWindow(NULL),
 m_pTextureFileManager(NULL),
 m_pVerticesManager(NULL),
 m_pSoundFileManager(NULL),
-m_pXFileManager(NULL)
+m_pXFileManager(NULL),
+m_pCameraSetting(NULL)
 {
 
 }
@@ -39,9 +41,10 @@ Library::~Library()
 	delete m_pSoundFileManager;
 	delete m_pTextureFileManager;
 	delete m_pVerticesManager;
+	delete m_pCameraSetting;
 }
 
-void Library::InitLibrary(const char* titleName_, int clientWidth_, int clientHeight_, bool isFullScreen_)
+void Library::InitLibrary(const char* titleName_, float clientWidth_, float clientHeight_, bool isFullScreen_)
 {
 	m_pWindow = New Window;
 	m_pWindow->Create(titleName_, clientWidth_, clientHeight_, isFullScreen_);
@@ -61,15 +64,17 @@ void Library::InitLibrary(const char* titleName_, int clientWidth_, int clientHe
 	m_pVerticesManager    = New VerticesManager;
 	m_pXFileManager       = New XFileManager;
 	m_pSoundFileManager   = New SoundFileManager;
+	m_pCameraSetting	  = New CameraSetting;
 }
 
+//---------------------Windowクラスのパブリック関数----------------------------------
 bool Library::Update()
 {
 	bool isUpdate = m_pWindow->Update();
 	return isUpdate;
 }
 
-//-------------------------DirectX9クラスのパブリック関数----------------------------
+//---------------------DirectX9クラスのパブリック関数--------------------------------
 void Library::SetFVF(DWORD fvf_)
 {
 	m_pDirectX9->SetFVF(fvf_);
@@ -90,7 +95,7 @@ void Library::Init3DDraw()
 	m_pDirectX9->Init3DDraw();
 }
 
-//-------------------InputManagerクラスのパブリック関数------------------------------
+//---------------------InputManagerクラスのパブリック関数----------------------------
 void Library::UpdateDI()
 {
 	m_pInputManager->UpdateDI();
@@ -107,7 +112,7 @@ KeyState Library::CheckKey(int dik_)
 	return keyState;
 }
 
-//-------------------TextureFileManagerクラスのパブリック関数------------------------
+//---------------------TextureFileManagerクラスのパブリック関数----------------------
 void Library::LoadTextureFile(int index_, const char* filePath_)
 {
 	m_pTextureFileManager->LoadTextureFile(index_, filePath_);
@@ -180,7 +185,7 @@ void Library::ReleaseSoundData(int index_)
 	m_pSoundFileManager->ReleaseSoundData(index_);
 }
 
-//-------------------XFileManagerクラスのパブリック関数--------------------------------
+//---------------------XFileManagerクラスのパブリック関数------------------------------
 void Library::LoadXFile(int index_, const char* filePath_)
 {
 	m_pXFileManager->LoadXFile(index_, filePath_);
@@ -201,7 +206,7 @@ void Library::ReleaseXFile(int index_)
 	m_pXFileManager->ReleaseXFile(index_);
 }
 
-//--------------------------Fontクラスのパブリック関数-----------------------------------
+//---------------------Fontクラスのパブリック関数----------------------------------------
 void Library::DrawFont(const char* pString_, float posX_, float posY_, DWORD format_, int red_, int green_, int blue_)
 {
 	Font font;
@@ -214,7 +219,23 @@ void Library::DrawFont(int width_, int height_, const char* pString_, float posX
 	font.DrawFont(pString_, D3DXVECTOR2(posX_, posY_), format_, red_, green_, blue_);
 }
 
-//-----------------------DebugSystemのパブリック関数-----------------------------------
+//----------------------CameraSettingクラスのパブリック関数-----------------------------
+void Library::TransformView(int index_, D3DXVECTOR3 eyePoint_, D3DXVECTOR3 lookAtPoint_, float angle_, float nearZ_, float farZ_)
+{
+	m_pCameraSetting->TransformView(index_, eyePoint_, lookAtPoint_, m_pWindow->GetAspect(), angle_, nearZ_, farZ_);
+}
+
+void Library::ReleaseAllCamera()
+{
+	m_pCameraSetting->ReleaseAllCamera();
+}
+
+void Library::ReleaseCamera(int index_)
+{
+	m_pCameraSetting->ReleaseCamera(index_);
+}
+
+//----------------------DebugSystemクラスのパブリック関数-------------------------------
 void Library::CheckMemoryLeaK()
 {
 	DebugSystem debugSystem;
