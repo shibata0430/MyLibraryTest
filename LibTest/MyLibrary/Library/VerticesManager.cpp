@@ -45,7 +45,8 @@ void VerticesManager::ReleaseAllVirtices()
 	{
 		delete m_pVertices[i];
 	}
-	std::vector<Vertices*>().swap(m_pVertices);
+	m_pVertices.clear();
+	m_pVertices.shrink_to_fit();
 }
 
 void VerticesManager::ReleaseVirtices(int index_)
@@ -53,7 +54,6 @@ void VerticesManager::ReleaseVirtices(int index_)
 	if (m_pVertices[index_] != NULL)
 	{
 		delete m_pVertices[index_];
-		m_pVertices.clear();
-		m_pVertices.shrink_to_fit();
+		m_pVertices[index_] = NULL;
 	}
 }

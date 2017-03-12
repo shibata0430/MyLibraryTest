@@ -60,7 +60,8 @@ void SoundFileManager::ReleaseAllSoundData()
 	{
 		delete m_pSoundFile[i];
 	}
-	std::vector<SoundFile*>().swap(m_pSoundFile);
+	m_pSoundFile.clear();
+	m_pSoundFile.shrink_to_fit();
 }
 
 void SoundFileManager::ReleaseSoundData(int index_)
@@ -68,7 +69,6 @@ void SoundFileManager::ReleaseSoundData(int index_)
 	if (m_pSoundFile[index_] != NULL)
 	{
 		delete m_pSoundFile[index_];
-		m_pSoundFile.clear();
-		m_pSoundFile.shrink_to_fit();
+		m_pSoundFile[index_] = NULL;
 	}
 }

@@ -40,7 +40,8 @@ void XFileManager::ReleaseAllXFile()
 	{
 		delete m_pXFile[i];
 	}
-	std::vector<XFile*>().swap(m_pXFile);
+	m_pXFile.clear();
+	m_pXFile.shrink_to_fit();
 }
 
 void XFileManager::ReleaseXFile(int index_)
@@ -48,7 +49,6 @@ void XFileManager::ReleaseXFile(int index_)
 	if (m_pXFile[index_] != NULL)
 	{
 		delete m_pXFile[index_];
-		m_pXFile.clear();
-		m_pXFile.shrink_to_fit();
+		m_pXFile[index_] = NULL;
 	}
 }

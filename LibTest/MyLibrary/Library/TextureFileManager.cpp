@@ -41,7 +41,8 @@ void TextureFileManager::ReleaseAllTexture()
 	{
 		delete m_pTextureFile[i];
 	}
-	std::vector<TextureFile*>().swap(m_pTextureFile);
+	m_pTextureFile.clear();
+	m_pTextureFile.shrink_to_fit();
 }
 
 void TextureFileManager::ReleaseTexture(int index_)
@@ -49,7 +50,6 @@ void TextureFileManager::ReleaseTexture(int index_)
 	if (m_pTextureFile[index_] != NULL)
 	{
 		delete m_pTextureFile[index_];
-		m_pTextureFile.clear();
-		m_pTextureFile.shrink_to_fit();
+		m_pTextureFile[index_] = NULL;
 	}
 }
