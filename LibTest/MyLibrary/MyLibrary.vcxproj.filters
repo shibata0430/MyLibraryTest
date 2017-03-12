@@ -55,6 +55,12 @@
     <Filter Include="Library\Font">
       <UniqueIdentifier>{30827307-f3fa-4984-ac96-35f67bd2628e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Library\CameraSetting">
+      <UniqueIdentifier>{4f4250bc-97d6-4cf7-8cec-5a74dc1844fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\CameraSetting\Camera">
+      <UniqueIdentifier>{0144ea49-fa6f-416b-beaf-ba7416e270bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Library.cpp">
@@ -107,6 +113,12 @@
     </ClCompile>
     <ClCompile Include="Library\Font.cpp">
       <Filter>Library\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Camera.cpp">
+      <Filter>Library\CameraSetting\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\CameraSetting.cpp">
+      <Filter>Library\CameraSetting</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +175,12 @@
     </ClInclude>
     <ClInclude Include="Library\Font.h">
       <Filter>Library\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Camera.h">
+      <Filter>Library\CameraSetting\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\CameraSetting.h">
+      <Filter>Library\CameraSetting</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
