@@ -50,7 +50,7 @@ public:
 	 * キーボードデバイスの取得関数
 	 * @return m_pKeyDevice キーボードデバイス
 	 */
-	inline LPDIRECTINPUTDEVICE8 GetKeyDevice()
+	LPDIRECTINPUTDEVICE8 GetKeyDevice()
 	{
 		return m_pKeyDevice;
 	}

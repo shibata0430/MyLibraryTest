@@ -30,7 +30,7 @@ public:
 	 * メッシュデータの取得関数
 	 * @return m_pMesh メッシュデータ
 	 */
-	inline LPD3DXMESH GetMeshData()
+	LPD3DXMESH GetMeshData()
 	{
 		return m_pMesh;
 	}

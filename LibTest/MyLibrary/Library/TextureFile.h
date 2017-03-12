@@ -42,7 +42,7 @@ public:
 	 * 画像データの取得関数
 	 * @return m_pTexture 画像データ
 	 */
-	inline LPDIRECT3DTEXTURE9 GetTextureFileData()
+	LPDIRECT3DTEXTURE9 GetTextureFileData()
 	{
 		return m_pTexture;
 	}
