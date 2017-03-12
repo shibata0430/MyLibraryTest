@@ -17,6 +17,12 @@ public:
 
 	virtual void Control();
 	virtual void Draw();
+
+private:
+	const float m_kWidth;
+	const float m_kHeight;
+	const float m_kPosX;
+	const float m_kPosY;
 };
 
 #endif // !BACKGROUND_H
