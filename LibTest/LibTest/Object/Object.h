@@ -11,6 +11,7 @@ class Library;
 
 enum Texture
 {
+	//PLAYER_TEX,
 	BACKGROUND_TEX,
 	MEET_TEX,
 
