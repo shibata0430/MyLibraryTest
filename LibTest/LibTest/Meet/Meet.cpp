@@ -16,8 +16,8 @@ m_posX(300.0f),
 m_upPosY(600.0f),
 m_downPosY(602.0f)
 {
-	m_rlibrary.LoadTextureFile(MEET_TEX, "Resource/Texture/meet.png");
-	m_rlibrary.SetTexSize(MEET_TEX, m_kWidth, m_kHeight);
+	m_rLibrary.LoadTextureFile(MEET, "Resource/Texture/meet.png");
+	m_rLibrary.SetTexSize(MEET, m_kWidth, m_kHeight);
 }
 
 Meet::~Meet()
@@ -47,10 +47,10 @@ void Meet::Draw()
 {
 	if (m_isUp)
 	{
-		m_rlibrary.DrawCenter(MEET_TEX, m_posX, m_upPosY);
+		m_rLibrary.DrawCenter(MEET, m_posX, m_upPosY);
 	}
 	else
 	{
-		m_rlibrary.DrawCenter(MEET_TEX, m_posX, m_downPosY);
+		m_rLibrary.DrawCenter(MEET, m_posX, m_downPosY);
 	}
 }

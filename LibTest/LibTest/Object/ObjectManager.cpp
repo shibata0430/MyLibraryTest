@@ -10,41 +10,32 @@
 #include "../Meet/Meet.h"
 #include <Library.h>
 
-ObjectManager::ObjectManager() : 
-m_pBackground(New Background),
-m_pMeet(New Meet)
+ObjectManager::ObjectManager()
 {
-
+	m_pObject.emplace_back(New Background);
+	m_pObject.emplace_back(New Meet);
 }
 
 ObjectManager::~ObjectManager()
 {
-	delete m_pBackground;
-	delete m_pMeet;
+	for (auto itr = m_pObject.begin(); itr != m_pObject.end(); ++itr)
+	{
+		delete (*itr);
+	}
 }
 
 void ObjectManager::Control()
 {
-	Object* pObjectList[2] = 
-	{ 
-		m_pBackground, m_pMeet
-	};
-
-	for (int i = 0; i < 2; i++)
+	for (auto itr = m_pObject.begin(); itr != m_pObject.end(); itr++)
 	{
-		pObjectList[i]->Control();
+		(*itr)->Control();
 	}
 }
 
 void ObjectManager::Draw()
 {
-	Object* pObjectList[2] = 
+	for (auto itr = m_pObject.begin(); itr != m_pObject.end(); ++itr)
 	{
-		m_pBackground, m_pMeet
-	};
-
-	for (int i = 0; i < 2; i++)
-	{
-		pObjectList[i]->Draw();
+		(*itr)->Draw();
 	}
 }

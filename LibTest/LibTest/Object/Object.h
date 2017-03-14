@@ -7,27 +7,28 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
+#include <d3dx9.h>
+
 class Library;
 
 enum Texture
 {
-	//PLAYER_TEX,
-	BACKGROUND_TEX,
-	MEET_TEX,
-
+	//PLAYER,
+	BACKGROUND,
+	MEET,
 };
 
 class Object
 {
 public:
 	Object();
-	~Object();
+	virtual ~Object();
 
-	virtual void Control() = 0;
+	virtual void Control();
 	virtual void Draw()    = 0;
 
 protected:
-	Library&				m_rlibrary;
+	Library&				m_rLibrary;
 };
 
 #endif // !OBJECT_H

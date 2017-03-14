@@ -13,20 +13,16 @@ m_kHeight(720.0f),
 m_kPosX(0.0f),
 m_kPosY(0.0f)
 {
-	m_rlibrary.LoadTextureFile(BACKGROUND_TEX, "Resource/Texture/Background.png");
-	m_rlibrary.SetTexSize(BACKGROUND_TEX, m_kWidth, m_kHeight);
+	m_rLibrary.LoadTextureFile(BACKGROUND, "Resource/Texture/Background.png");
+	m_rLibrary.SetTexSize(BACKGROUND, m_kWidth, m_kHeight);
 }
 
 Background::~Background()
-{
-}
-
-void Background::Control()
 {
 
 }
 
 void Background::Draw()
 {
-	m_rlibrary.DrawLeftTop(BACKGROUND_TEX, m_kPosX, m_kPosY);
+	m_rLibrary.DrawLeftTop(BACKGROUND, m_kPosX, m_kPosY);
 }

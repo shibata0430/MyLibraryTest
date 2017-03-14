@@ -13,9 +13,9 @@ class Meet : public Object
 {
 public:
 	Meet();
-	~Meet();
+	virtual ~Meet();
 
-	virtual void Control();
+	virtual void Control() override;
 	virtual void Draw();
 
 private:

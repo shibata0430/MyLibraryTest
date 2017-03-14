@@ -7,8 +7,11 @@
 #ifndef OBJECTMANAGER_H
 #define OBJECTMANAGER_H
 
+#include <vector>
+
 class Background;
 class Meet;
+class Object;
 
 class ObjectManager
 {
@@ -22,6 +25,7 @@ public:
 private:
 	Background*		m_pBackground;
 	Meet*			m_pMeet;
+	std::vector<Object*>	m_pObject;
 
 };
 

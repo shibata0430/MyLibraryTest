@@ -13,9 +13,8 @@ class Background : public Object
 {
 public:
 	Background();
-	~Background();
+	virtual ~Background();
 
-	virtual void Control();
 	virtual void Draw();
 
 private:

@@ -13,19 +13,19 @@
   <ItemGroup>
     <ClCompile Include="App\Application.cpp" />
     <ClCompile Include="Background\Backgoround.cpp" />
+    <ClCompile Include="Chart\Chart.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Meet\Meet.cpp" />
     <ClCompile Include="Object\Object.cpp" />
     <ClCompile Include="Object\ObjectManager.cpp" />
-    <ClCompile Include="Player\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App\Application.h" />
     <ClInclude Include="Background\Backgoround.h" />
+    <ClInclude Include="Chart\Chart.h" />
     <ClInclude Include="Meet\Meet.h" />
     <ClInclude Include="Object\Object.h" />
     <ClInclude Include="Object\ObjectManager.h" />
-    <ClInclude Include="Player\Player.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A96ABE97-5185-4E9C-AABE-CB7949F7EA33}</ProjectGuid>
