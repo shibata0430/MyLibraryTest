@@ -8,7 +8,7 @@
 #include "DirectX9.h"
 
 Light::Light() : 
-m_pGraphicsdevice(DirectX9::Instance().GetDevice)
+m_pGraphicsdevice(DirectX9::Instance().GetDevice())
 {
 
 }

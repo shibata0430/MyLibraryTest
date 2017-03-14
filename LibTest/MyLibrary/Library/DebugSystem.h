@@ -14,8 +14,6 @@ public:
 	~DebugSystem();
 
 	void CheckMemoryLeaK();
-
-	void WarningUeser();
 };
 
 #endif // !DEBUGSYSTEM_H

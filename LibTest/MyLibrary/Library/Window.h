@@ -37,14 +37,14 @@ public:
 		return m_hWnd;
 	}
 
-	float GetAspect()
+	int GetAspect()
 	{
 		return (m_clientWidth / m_clientHeight);
 	}
 
 private:
-	float	m_clientWidth;
-	float	m_clientHeight;
+	int 	m_clientWidth;
+	int 	m_clientHeight;
 	HWND	m_hWnd; //!< ウィンドウハンドル
 	MSG		m_msg;
 };

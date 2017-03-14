@@ -97,6 +97,8 @@ public:		// DirectX9クラスのパブリック関数
 	*/
 	void Init3DDraw();
 
+	LPDIRECT3DDEVICE9 GetDevice();
+
 public:		// InputManagerクラスのパブリック関数
 	/**DI系をすべて更新する関数*/
 	void UpdateDI();

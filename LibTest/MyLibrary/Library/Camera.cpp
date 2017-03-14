@@ -18,10 +18,9 @@ Camera::~Camera()
 
 }
 
-void Camera::TransformView(D3DXVECTOR3 eyePoint_, D3DXVECTOR3 lookAtPoint_, float aspect_, float angle_, float nearZ_, float farZ_)
+void Camera::TransformView(const D3DXVECTOR3& eyePoint_, const D3DXVECTOR3& lookAtPoint_, const float aspect_, const float angle_, const float nearZ_, const float farZ_)
 {
-
-	D3DXMATRIXA16 matView;
+		D3DXMATRIXA16 matView;
 	{
 		D3DXVECTOR3 vecUpVec(0.0f, 1.0f, 0.0f);	//カメラの上下の向きを決める
 
@@ -67,4 +66,5 @@ void Camera::TransformView(D3DXVECTOR3 eyePoint_, D3DXVECTOR3 lookAtPoint_, floa
 		D3DXMatrixPerspectiveFovLH(&matProj, viewAngle, aspect, nearZ, farZ);
 		m_pGraphicsDevice->SetTransform(D3DTS_PROJECTION, &matProj);
 	}
+
 }

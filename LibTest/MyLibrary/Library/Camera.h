@@ -29,7 +29,7 @@ public:
 	* @note farZ_のデフォルト値は10000.0f
 	* @note angle_のデフォルト値は50.0f
 	*/
-	void TransformView(D3DXVECTOR3 eyePoint_, D3DXVECTOR3 lookAtPoint_, float aspect_, float angle_, float nearZ_, float farZ_);
+	void TransformView(const D3DXVECTOR3& eyePoint_, const D3DXVECTOR3& lookAtPoint_, float aspect_, float angle_, float nearZ_, float farZ_);
 
 private:
 	LPDIRECT3DDEVICE9		m_pGraphicsDevice;	//!< DirectX9から取ってきたデバイス

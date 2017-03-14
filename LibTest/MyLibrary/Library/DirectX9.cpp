@@ -22,7 +22,7 @@ DirectX9::~DirectX9()
 	m_pDirect3D = NULL;
 }
 
-bool DirectX9::InitDirectX(HWND hWnd_, int clientWidth_, int clientHeight_, bool isFullScreen_)
+bool DirectX9::InitDirectX(const HWND hWnd_, const int clientWidth_, const int clientHeight_, const bool isFullScreen_)
 {
 	m_pDirect3D = Direct3DCreate9(D3D_SDK_VERSION);
 

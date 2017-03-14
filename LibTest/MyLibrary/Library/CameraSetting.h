@@ -31,7 +31,7 @@ public:
 	* @note farZ_のデフォルト値は10000.0f
 	* @note angle_のデフォルト値は50.0f
 	*/
-	void TransformView(int index_, D3DXVECTOR3 eyePoint_, D3DXVECTOR3 lookAtPoint_, float aspect_, float angle_, float nearZ_, float farZ_);
+	void TransformView(int index_, const D3DXVECTOR3& eyePoint_, const D3DXVECTOR3& lookAtPoint_, float aspect_, float angle_, float nearZ_, float farZ_);
 
 	/**全てのカメラの解放関数*/
 	void ReleaseAllCamera();

@@ -7,8 +7,8 @@
 #include "Window.h"
 
 Window::Window() :
-m_clientWidth(0.0f),
-m_clientHeight(0.0f),
+m_clientWidth(0),
+m_clientHeight(0),
 m_hWnd(NULL)
 {
 

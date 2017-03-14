@@ -63,7 +63,7 @@ public:
 	 * デバイスの取得関数
 	 * @return	m_pD3Device	デバイス情報
 	 */
-	LPDIRECT3DDEVICE9 GetDevice()
+	LPDIRECT3DDEVICE9 GetDevice() const
 	{
 		return m_pD3Device;
 	}
