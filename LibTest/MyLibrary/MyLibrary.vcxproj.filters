@@ -61,6 +61,12 @@
     <Filter Include="Library\CameraSetting\Camera">
       <UniqueIdentifier>{0144ea49-fa6f-416b-beaf-ba7416e270bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Library\LightSetting">
+      <UniqueIdentifier>{681e8681-a783-41b2-84d5-912ed14b8297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\LightSetting\Light">
+      <UniqueIdentifier>{d80fd5d6-f444-4fe1-a6d8-60f243361d0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Library.cpp">
@@ -119,6 +125,12 @@
     </ClCompile>
     <ClCompile Include="Library\CameraSetting.cpp">
       <Filter>Library\CameraSetting</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Light.cpp">
+      <Filter>Library\LightSetting\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\LightSetting.cpp">
+      <Filter>Library\LightSetting</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +193,12 @@
     </ClInclude>
     <ClInclude Include="Library\CameraSetting.h">
       <Filter>Library\CameraSetting</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Light.h">
+      <Filter>Library\LightSetting\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\LightSetting.h">
+      <Filter>Library\LightSetting</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

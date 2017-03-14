@@ -84,6 +84,8 @@
     <ClCompile Include="Library\InputDvice.cpp" />
     <ClCompile Include="Library\InputKey.cpp" />
     <ClCompile Include="Library\InputManager.cpp" />
+    <ClCompile Include="Library\Light.cpp" />
+    <ClCompile Include="Library\LightSetting.cpp" />
     <ClCompile Include="Library\SoundFile.cpp" />
     <ClCompile Include="Library\SoundFileManager.cpp" />
     <ClCompile Include="Library\SoundInterface.cpp" />
@@ -102,6 +104,8 @@
     <ClInclude Include="Library\DebugSystem.h" />
     <ClInclude Include="Library\InputKey.h" />
     <ClInclude Include="Library\InputManager.h" />
+    <ClInclude Include="Library\Light.h" />
+    <ClInclude Include="Library\LightSetting.h" />
     <ClInclude Include="Library\SoundFile.h" />
     <ClInclude Include="Library\SoundFileManager.h" />
     <ClInclude Include="Library\Vertices.h" />
