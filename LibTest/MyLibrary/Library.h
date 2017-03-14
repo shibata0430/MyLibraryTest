@@ -25,6 +25,7 @@ class VerticesManager;
 class SoundFileManager;
 class XFileManager;
 class CameraSetting;
+class LightSetting;
 
 enum SoundMode
 {
@@ -71,7 +72,7 @@ public:		// Libraryクラスのパブリック関数
 	 * @param [in] clientHeiht_		画面縦幅のサイズ
 	 * @param [in] isFullScreen_	フルスクリーンにするかどうか
 	 */
-	void InitLibrary(const char* titleName_, float clientWidth_, float clientHeight_, bool isFullScreen_);
+	void InitLibrary(const char* titleName_, int clientWidth_, int clientHeight_, bool isFullScreen_);
 
 public:		// Windowクラスのパブリック関数
 	bool Update();
@@ -298,7 +299,24 @@ public:		// CameraSettingクラスのパブリック関数
 	*/
 	void ReleaseCamera(int index_);
 
+public:		// Lightsettingクラスのパブリック関数
+	/**
+	* ライトの設定をする関数
+	* @param [in]	index_		ライトを設置する場所
+	* @param [in]	direction_	ワールド空間での光の指す方向
+	* @note direction_のデフォルト値は(0.0f, 0.0f, 1.0f)
+	* direction_は0.0fより大きな値を入れなければならない
+	*/
+	void Lighting(int index_, D3DXVECTOR3 direction_ = { 0.0f, 0.0f, 1.0f });
 
+	/**全てのライトデータの解放関数*/
+	void ReleaseAllLight();
+
+	/**
+	* 一部のライトデータの解放関数
+	* @param [in] index_	解放する配列番号
+	*/
+	void ReleaseLight(int index_);
 
 public:		// DebugSystemクラスのパブリック関数
 	/**メモリリークを発見する関数*/
@@ -315,6 +333,7 @@ private:
 	SoundFileManager*		m_pSoundFileManager;
 	XFileManager*			m_pXFileManager;
 	CameraSetting*			m_pCameraSetting;
+	LightSetting*			m_pLightsetting;
 };
 
 #pragma comment(lib, "dsound.lib" )

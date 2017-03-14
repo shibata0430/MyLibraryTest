@@ -17,6 +17,7 @@
 #include "Library\DebugSystem.h"
 #include "Library\Font.h"
 #include "Library\CameraSetting.h"
+#include "Library\LightSetting.h"
 
 Library::Library() :
 m_pDirectX9(NULL),
@@ -28,7 +29,8 @@ m_pTextureFileManager(NULL),
 m_pVerticesManager(NULL),
 m_pSoundFileManager(NULL),
 m_pXFileManager(NULL),
-m_pCameraSetting(NULL)
+m_pCameraSetting(NULL),
+m_pLightsetting(NULL)
 {
 
 }
@@ -42,9 +44,10 @@ Library::~Library()
 	delete m_pTextureFileManager;
 	delete m_pVerticesManager;
 	delete m_pCameraSetting;
+	delete m_pLightsetting;
 }
 
-void Library::InitLibrary(const char* titleName_, float clientWidth_, float clientHeight_, bool isFullScreen_)
+void Library::InitLibrary(const char* titleName_, int clientWidth_, int clientHeight_, bool isFullScreen_)
 {
 	m_pWindow = New Window;
 	m_pWindow->Create(titleName_, clientWidth_, clientHeight_, isFullScreen_);
@@ -59,12 +62,13 @@ void Library::InitLibrary(const char* titleName_, float clientWidth_, float clie
 	m_pSoundInterface = &SoundInterface::Instance();
 	m_pSoundInterface->InitSound(m_pWindow->GetHwnd());
 
-	m_pInputManager       = New InputManager;
-	m_pTextureFileManager = New TextureFileManager;
-	m_pVerticesManager    = New VerticesManager;
-	m_pXFileManager       = New XFileManager;
-	m_pSoundFileManager   = New SoundFileManager;
-	m_pCameraSetting	  = New CameraSetting;
+	m_pInputManager			= New InputManager;
+	m_pTextureFileManager	= New TextureFileManager;
+	m_pVerticesManager		= New VerticesManager;
+	m_pXFileManager			= New XFileManager;
+	m_pSoundFileManager		= New SoundFileManager;
+	m_pCameraSetting		= New CameraSetting;
+	m_pLightsetting			= New LightSetting;
 }
 
 //---------------------Windowクラスのパブリック関数----------------------------------
@@ -233,6 +237,22 @@ void Library::ReleaseAllCamera()
 void Library::ReleaseCamera(int index_)
 {
 	m_pCameraSetting->ReleaseCamera(index_);
+}
+
+//-----------------------Lightsettingクラスのパブリック関数-----------------------------
+void Library::Lighting(int index_, D3DXVECTOR3 direction_)
+{
+	m_pLightsetting->Lighting(index_, direction_);
+}
+
+void Library::ReleaseAllLight()
+{
+	m_pLightsetting->ReleaseAllLight();
+}
+
+void Library::ReleaseLight(int index_)
+{
+	m_pLightsetting->ReleaseLight(index_);
 }
 
 //----------------------DebugSystemクラスのパブリック関数-------------------------------
