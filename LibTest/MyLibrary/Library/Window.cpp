@@ -41,7 +41,7 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 	return DefWindowProc(hWnd, iMsg, wParam, lParam);
 }
 
-void Window::Create(const char* titleName_, float clientWidth_, float clientHeiht_, bool isFullScreen_)
+void Window::Create(const char* titleName_, int clientWidth_, int clientHeiht_, bool isFullScreen_)
 {
 	m_clientWidth	= clientWidth_;
 	m_clientHeight	= clientHeiht_;

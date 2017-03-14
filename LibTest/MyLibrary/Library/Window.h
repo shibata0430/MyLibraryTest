@@ -24,7 +24,7 @@ public:
 	 * @param [in] clientHeiht_		画面縦幅のサイズ
 	 * @param [in] isFullScreen_	フルスクリーンにするかどうか
 	 */
-	void Create(const char* titleName_, float clientWidth_, float clientHeight_, bool isFullScreen_);
+	void Create(const char* titleName_, int clientWidth_, int clientHeight_, bool isFullScreen_);
 
 	bool Update();
 
