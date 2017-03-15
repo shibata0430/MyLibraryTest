@@ -13,9 +13,14 @@ class Library;
 
 enum Texture
 {
-	//PLAYER,
 	BACKGROUND,
+	PLAYER,
 	MEET,
+};
+
+enum Sound
+{
+	BGM,
 };
 
 class Object

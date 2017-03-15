@@ -2,23 +2,22 @@
 #include <Library.h>
 #include "App\Application.h"
 
-#define CLIENT_WIDTH	1280
-#define CLIENT_HEIGHT	720
-#define TITLE_TEXT		("LibTest")
-#define GAME_FPS		(1000/60)
+namespace
+{
+	const int	clientWidth		= 1280;
+	const int	clientHeight	= 720;
+	const char*	title			= "LibTest";
+	const int	gameFPS			= (1000 / 60);
+}
 
-int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR szStr, INT iCmdShow)
+int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 {
 	Library*		pLibrary = &Library::Instace();
 	Application*	pApp = NULL;
 
 	pLibrary->CheckMemoryLeaK();
 
-#ifdef _DEBUG
-	pLibrary->InitLibrary(TITLE_TEXT, CLIENT_WIDTH, CLIENT_HEIGHT, false);
-#else
-	pLibrary->InitLibrary(TITLE_TEXT, CLIENT_WIDTH, CLIENT_HEIGHT, true);
-#endif
+	pLibrary->InitLibrary(title, clientWidth, clientHeight, false);
 
 	pApp = New Application;
 
@@ -28,7 +27,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR szStr, INT iCmdSh
 	while (!pLibrary->Update())
 	{
 		currentTime = timeGetTime();
-		if (currentTime - oldTime >= GAME_FPS)
+		if (currentTime - oldTime >= gameFPS)
 		{
 			if (pApp->Run())
 			{

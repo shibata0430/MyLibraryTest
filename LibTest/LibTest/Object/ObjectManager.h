@@ -9,9 +9,8 @@
 
 #include <vector>
 
-class Background;
-class Meet;
 class Object;
+class Library;
 
 class ObjectManager
 {
@@ -23,10 +22,8 @@ public:
 	void Draw();
 
 private:
-	Background*		m_pBackground;
-	Meet*			m_pMeet;
 	std::vector<Object*>	m_pObject;
-
+	Library&				m_rLibrary;
 };
 
 #endif // !OBJECTMANAGER_H

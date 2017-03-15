@@ -51,6 +51,9 @@
     <ClCompile Include="Chart\Chart.cpp">
       <Filter>main\Application\Object\Chart</Filter>
     </ClCompile>
+    <ClCompile Include="Player\Player.cpp">
+      <Filter>main\Application\Object\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App\Application.h">
@@ -70,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="Chart\Chart.h">
       <Filter>main\Application\Object\Chart</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\Player.h">
+      <Filter>main\Application\Object\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
