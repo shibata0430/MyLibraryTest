@@ -17,15 +17,11 @@ m_rLibrary(Library::Instace())
 	m_pObject.emplace_back(New Background);
 	m_pObject.emplace_back(New Player);
 	m_pObject.emplace_back(New Meet);
-	m_rLibrary.LoadSoundFile(BGM, "Resource/Sound/bgm.wav");
-	m_rLibrary.SoundState(BGM, LOOP);
 
 }
 
 ObjectManager::~ObjectManager()
 {
-	m_rLibrary.SoundState(BGM, STOP);
-	m_rLibrary.ReleaseAllSoundData();
 
 	for (auto itr = m_pObject.begin(); itr != m_pObject.end(); ++itr)
 	{
