@@ -49,7 +49,7 @@ public:
 	 * @param [in] pTextureData_	テクスチャデータ
 	 * @note Libraryでテクスチャデータを取得する
 	 */
-	void DrawLeftTop(D3DXVECTOR2 position_, LPDIRECT3DTEXTURE9 pTextureData_);
+	void DrawLeftTop(const D3DXVECTOR2& position_, const LPDIRECT3DTEXTURE9 pTextureData_);
 
 	/**
 	* 中心からの描画関数
@@ -57,7 +57,7 @@ public:
 	* @param [in] pTextureData_	テクスチャデータ
 	* @note Libraryでテクスチャデータを取得する
 	*/
-	void DrawCenter(D3DXVECTOR2 position_, LPDIRECT3DTEXTURE9 pTextureData_);
+	void DrawCenter(const D3DXVECTOR2& position_, const LPDIRECT3DTEXTURE9 pTextureData_);
 
 	/**
 	 * 色の変更する関数
@@ -68,7 +68,7 @@ public:
 	 * @param [in] blue_	変更する青の値
 	 * @note rbgaのデフォルト値は255
 	 */
-	void SetColor(DWORD color_, int alpha_, int red_, int green_, int blue_);
+	void SetColor(DWORD& color_, int alpha_, int red_, int green_, int blue_);
 
 private:
 	LPDIRECT3DDEVICE9	m_pGraphicsDevice;	//!< DirectX9から取ってきたデバイス

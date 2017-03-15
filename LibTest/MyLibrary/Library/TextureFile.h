@@ -36,13 +36,13 @@ public:
 	 * @note colorのデフォルトは255
 	 * @note isTowPower_のデフォルトはtrue
 	 */
-	bool LoadTextuerMoreInfo(const char* filePath_, D3DXCOLOR color, bool isTwoPower_);
+	bool LoadTextuerMoreInfo(const char* filePath_, const D3DXCOLOR& color, bool isTwoPower_);
 
 	/**
 	 * 画像データの取得関数
 	 * @return m_pTexture 画像データ
 	 */
-	LPDIRECT3DTEXTURE9 GetTextureFileData()
+	LPDIRECT3DTEXTURE9 GetTextureFileData() const
 	{
 		return m_pTexture;
 	}

@@ -30,7 +30,7 @@ void TextureFileManager::LoadTextuerMoreInfo(int index_, const char* filePath_, 
 	m_pTextureFile[index_]->LoadTextuerMoreInfo(filePath_, (red_, green_, blue_, alpha_), isTwoPower_);
 }
 
-LPDIRECT3DTEXTURE9 TextureFileManager::GetTextureFileData(int index_)
+LPDIRECT3DTEXTURE9 TextureFileManager::GetTextureFileData(int index_) const
 {
 	return m_pTextureFile[index_]->GetTextureFileData();
 }

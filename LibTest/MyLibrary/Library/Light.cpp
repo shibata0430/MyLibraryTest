@@ -18,7 +18,7 @@ Light::~Light()
 
 }
 
-void Light::Lighting(D3DXVECTOR3 direction_)
+void Light::Lighting(const D3DXVECTOR3& direction_)
 {
 	ZeroMemory(&m_light, sizeof(D3DLIGHT9));
 	m_light.Type = D3DLIGHT_DIRECTIONAL;

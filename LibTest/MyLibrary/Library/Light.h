@@ -23,7 +23,7 @@ public:
 	 * @note direction_のデフォルト値は(0.0f, 0.0f, 1.0f)
 	 * direction_は0.0fより大きな値を入れなければならない
 	 */
-	void Lighting(D3DXVECTOR3 direction_);
+	void Lighting(const D3DXVECTOR3& direction_);
 
 private:
 	D3DLIGHT9				m_light;			//!< ライト設定をする構造体

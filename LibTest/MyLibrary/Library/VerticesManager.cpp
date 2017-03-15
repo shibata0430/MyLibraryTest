@@ -24,12 +24,12 @@ void VerticesManager::SetTexSize(int index_, float width_, float height_, float 
 	m_pVertices[index_]->SetTexSize(width_, height_, depth_, maxTu_, maxTv_, minTu_, minTv_);
 }
 
-void VerticesManager::DrawLeftTop(int index_, float posX_, float posY_, LPDIRECT3DTEXTURE9 pTextureData_)
+void VerticesManager::DrawLeftTop(int index_, float posX_, float posY_, const LPDIRECT3DTEXTURE9 pTextureData_)
 {
 	m_pVertices[index_]->DrawLeftTop({ posX_, posY_ }, pTextureData_);
 }
 
-void VerticesManager::DrawCenter(int index_, float posX_, float posY_, LPDIRECT3DTEXTURE9 pTextureData_)
+void VerticesManager::DrawCenter(int index_, float posX_, float posY_, const LPDIRECT3DTEXTURE9 pTextureData_)
 {
 	m_pVertices[index_]->DrawCenter({ posX_, posY_ }, pTextureData_);
 }

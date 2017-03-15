@@ -229,7 +229,7 @@ void Library::DrawFont(int width_, int height_, const char* pString_, float posX
 }
 
 //----------------------CameraSettingクラスのパブリック関数-----------------------------
-void Library::TransformView(int index_, D3DXVECTOR3 eyePoint_, D3DXVECTOR3 lookAtPoint_, float angle_, float nearZ_, float farZ_)
+void Library::TransformView(int index_, const D3DXVECTOR3& eyePoint_, const D3DXVECTOR3& lookAtPoint_, float angle_, float nearZ_, float farZ_)
 {
 	m_pCameraSetting->TransformView(index_, eyePoint_, lookAtPoint_, static_cast<float>(m_pWindow->GetAspect()), angle_, nearZ_, farZ_);
 }
@@ -245,7 +245,7 @@ void Library::ReleaseCamera(int index_)
 }
 
 //-----------------------Lightsettingクラスのパブリック関数-----------------------------
-void Library::Lighting(int index_, D3DXVECTOR3 direction_)
+void Library::Lighting(int index_, const D3DXVECTOR3& direction_)
 {
 	m_pLightsetting->Lighting(index_, direction_);
 }

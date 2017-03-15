@@ -30,7 +30,7 @@ bool TextureFile::LoadTextureFile(const char* filePath_)
 	return true;
 }
 
-bool TextureFile::LoadTextuerMoreInfo(const char* filePath_, D3DXCOLOR color, bool isTwoPower_)
+bool TextureFile::LoadTextuerMoreInfo(const char* filePath_, const D3DXCOLOR& color, bool isTwoPower_)
 {
 	if (isTwoPower_)	// 2の累乗なら
 	{
@@ -45,7 +45,7 @@ bool TextureFile::LoadTextuerMoreInfo(const char* filePath_, D3DXCOLOR color, bo
 			D3DPOOL_DEFAULT,
 			D3DX_FILTER_NONE,
 			D3DX_DEFAULT,
-			D3DCOLOR_ARGB((int)color.a, (int)color.r, (int)color.g, (int)color.b),
+			D3DCOLOR_ARGB(static_cast<int>(color.a), static_cast<int>(color.r), static_cast<int>(color.g), static_cast<int>(color.b)),
 			NULL,
 			NULL,
 			&m_pTexture

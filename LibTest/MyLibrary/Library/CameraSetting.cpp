@@ -17,7 +17,7 @@ CameraSetting::~CameraSetting()
 	ReleaseAllCamera();
 }
 
-void CameraSetting::TransformView(const int index_, const D3DXVECTOR3& eyePoint_, const D3DXVECTOR3& lookAtPoint_, const float aspect_, const float angle_, const float nearZ_, const float farZ_)
+void CameraSetting::TransformView(int index_, const D3DXVECTOR3& eyePoint_, const D3DXVECTOR3& lookAtPoint_, float aspect_, float angle_, float nearZ_, float farZ_)
 {
 	m_pCamera.emplace_back(New Camera);
 

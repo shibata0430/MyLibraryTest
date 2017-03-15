@@ -60,7 +60,7 @@ Font::~Font()
 	}
 }
 
-void Font::DrawFont(const char* pString_, D3DXVECTOR2 position_, DWORD format_, int red_, int green_, int blue_)
+void Font::DrawFont(const char* pString_, const D3DXVECTOR2& position_, DWORD format_, int red_, int green_, int blue_)
 {
 	RECT rect;
 	{

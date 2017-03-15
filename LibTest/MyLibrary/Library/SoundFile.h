@@ -54,7 +54,7 @@ private:
 	 * @retval		true			読み込み成功
 	 * @retval		false			読み込み失敗
 	 */
-	bool OpenWave(char* filePath_, WAVEFORMATEX* waveFormat_, char** ppData_, DWORD* dataSize_);
+	bool OpenWave(char* filePath_, WAVEFORMATEX& waveFormat_, char** ppData_, DWORD& dataSize_);
 
 private:
 	IDirectSound8*			m_pDsound8;			//!< サウンドインターフェイス

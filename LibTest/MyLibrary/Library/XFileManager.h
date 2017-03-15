@@ -36,7 +36,7 @@ public:
 	* @param [in]	index_	Xファイルの配列番号
 	* @return		m_pMesh メッシュデータ
 	*/
-	LPD3DXMESH GetMeshData(int index_);
+	LPD3DXMESH GetMeshData(int index_) const;
 
 	/**全てのXファイルの解放関数*/
 	void ReleaseAllXFile();

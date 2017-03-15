@@ -36,10 +36,10 @@ void Vertices::SetTexSize(float width_, float height_, float depth_, float maxTu
 	m_texMaxTu  = maxTu_;
 	m_texMaxTv  = maxTv_;
 	m_texMinTu  = minTu_;
-	m_texMinTv  = minTu_;
+	m_texMinTv  = minTv_;
 }
 
-void Vertices::DrawLeftTop(D3DXVECTOR2 position_, LPDIRECT3DTEXTURE9 pTextureData_)
+void Vertices::DrawLeftTop(const D3DXVECTOR2& position_, const LPDIRECT3DTEXTURE9 pTextureData_)
 {
 	CUSTOMVERTEX vertex[4] =
 	{
@@ -59,7 +59,7 @@ void Vertices::DrawLeftTop(D3DXVECTOR2 position_, LPDIRECT3DTEXTURE9 pTextureDat
 	m_pGraphicsDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, vertex, sizeof(CUSTOMVERTEX));
 }
 
-void Vertices::DrawCenter(D3DXVECTOR2 position_, LPDIRECT3DTEXTURE9 pTextureData_)
+void Vertices::DrawCenter(const D3DXVECTOR2& position_, const LPDIRECT3DTEXTURE9 pTextureData_)
 {
 	CUSTOMVERTEX vertex[4] =
 	{
@@ -80,7 +80,7 @@ void Vertices::DrawCenter(D3DXVECTOR2 position_, LPDIRECT3DTEXTURE9 pTextureData
 
 }
 
-void Vertices::SetColor(DWORD color_, int alpha_, int red_, int green_, int blue_)
+void Vertices::SetColor(DWORD& color_, int alpha_, int red_, int green_, int blue_)
 {
 	{
 		DWORD preColor = D3DCOLOR_ARGB(alpha_, red_, green_, blue_);

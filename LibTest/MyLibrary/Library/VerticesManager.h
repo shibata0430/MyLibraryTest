@@ -44,7 +44,7 @@ public:
 	* @param [in] pTextureData_	テクスチャデータ
 	* @note Libraryでテクスチャデータを取得する
 	*/
-	void DrawLeftTop(int index_, float posX_, float posY_, LPDIRECT3DTEXTURE9 pTextureData_);
+	void DrawLeftTop(int index_, float posX_, float posY_, const LPDIRECT3DTEXTURE9 pTextureData_);
 
 	/**
 	* 中心からの描画関数
@@ -54,7 +54,7 @@ public:
 	* @param [in] pTextureData_	テクスチャデータ
 	* @note Libraryでテクスチャデータを取得する
 	*/
-	void DrawCenter(int index_, float posX_, float posY_, LPDIRECT3DTEXTURE9 pTextureData_);
+	void DrawCenter(int index_, float posX_, float posY_, const LPDIRECT3DTEXTURE9 pTextureData_);
 
 	/**
 	* 色の変更する関数

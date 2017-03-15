@@ -29,7 +29,7 @@ void XFileManager::DrawXFile(int index_)
 	m_pXFile[index_]->DrawXFile();
 }
 
-LPD3DXMESH XFileManager::GetMeshData(int index_)
+LPD3DXMESH XFileManager::GetMeshData(int index_) const
 {
 	return m_pXFile[index_]->GetMeshData();
 }

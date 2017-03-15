@@ -290,7 +290,7 @@ public:		// CameraSettingクラスのパブリック関数
 	* @note farZ_のデフォルト値は10000.0f
 	* @note angle_のデフォルト値は50.0f
 	*/
-	void TransformView(int index_, D3DXVECTOR3 eyePoint_, D3DXVECTOR3 lookAtPoint_, float angle_ = 50.0f, float nearZ_ = 1.0f, float farZ_ = 10000.0f);
+	void TransformView(int index_, const D3DXVECTOR3& eyePoint_, const D3DXVECTOR3& lookAtPoint_, float angle_ = 50.0f, float nearZ_ = 1.0f, float farZ_ = 10000.0f);
 
 	/**全てのカメラの解放関数*/
 	void ReleaseAllCamera();
@@ -309,7 +309,7 @@ public:		// Lightsettingクラスのパブリック関数
 	* @note direction_のデフォルト値は(0.0f, 0.0f, 1.0f)
 	* direction_は0.0fより大きな値を入れなければならない
 	*/
-	void Lighting(int index_, D3DXVECTOR3 direction_ = { 0.0f, 0.0f, 1.0f });
+	void Lighting(int index_, const D3DXVECTOR3& direction_ = { 0.0f, 0.0f, 1.0f });
 
 	/**全てのライトデータの解放関数*/
 	void ReleaseAllLight();

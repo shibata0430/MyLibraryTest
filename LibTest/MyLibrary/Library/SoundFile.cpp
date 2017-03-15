@@ -17,8 +17,11 @@ m_pDsoundBuffer(NULL)
 
 SoundFile::~SoundFile()
 {
-	m_pDsoundBuffer->Release();
-	m_pDsoundBuffer = NULL;
+	if (m_pDsoundBuffer != NULL)
+	{
+		m_pDsoundBuffer->Release();
+		m_pDsoundBuffer = NULL;
+	}
 }
 
 bool SoundFile::LoadSoundFile(const char* filePath_)
@@ -29,7 +32,7 @@ bool SoundFile::LoadSoundFile(const char* filePath_)
 		WAVEFORMATEX waveFormat;
 		DWORD waveSize = NULL;
 
-		if (!OpenWave((char*)filePath_, &waveFormat, &pWaveData, &waveSize))
+		if (!OpenWave((char*)filePath_, waveFormat, &pWaveData, waveSize))
 		{
 			return false;
 		}
@@ -95,7 +98,7 @@ void SoundFile::SoundState(SoundFile::Mode soundMode_)
 	}
 }
 
-bool SoundFile::OpenWave(char* filePath_, WAVEFORMATEX* waveFormat_, char** ppData_, DWORD* dataSize_)
+bool SoundFile::OpenWave(char* filePath_, WAVEFORMATEX& waveFormat_, char** ppData_, DWORD& dataSize_)
 {
 	HMMIO hmmio = NULL;
 
@@ -134,7 +137,7 @@ bool SoundFile::OpenWave(char* filePath_, WAVEFORMATEX* waveFormat_, char** ppDa
 			return false;
 		}
 		DWORD fmsize = formatchunk.cksize;
-		DWORD size = mmioRead(hmmio, (HPSTR)waveFormat_, fmsize);
+		DWORD size = mmioRead(hmmio, (HPSTR)&waveFormat_, fmsize);
 		if (size != fmsize)
 		{
 			mmioClose(hmmio, 0);
@@ -162,7 +165,7 @@ bool SoundFile::OpenWave(char* filePath_, WAVEFORMATEX* waveFormat_, char** ppDa
 			return false;
 		}
 
-		*dataSize_ = size;
+		dataSize_ = size;
 	}
 
 	// ハンドルクローズ

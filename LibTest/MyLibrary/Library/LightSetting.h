@@ -25,7 +25,7 @@ public:
 	* @note direction_のデフォルト値は(0.0f, 0.0f, 1.0f)
 	* direction_は0.0fより大きな値を入れなければならない
 	*/
-	void Lighting(int index_, D3DXVECTOR3 direction_);
+	void Lighting(int index_, const D3DXVECTOR3& direction_);
 
 	/**全てのライトデータの解放関数*/
 	void ReleaseAllLight();

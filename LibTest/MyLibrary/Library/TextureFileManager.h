@@ -46,7 +46,7 @@ public:
 	* @param [in]	index_		画像データの配列番号
 	* @return		m_pTexture	画像データ
 	*/
-	LPDIRECT3DTEXTURE9 GetTextureFileData(int index_);
+	LPDIRECT3DTEXTURE9 GetTextureFileData(int index_) const;
 
 	/**全てのテクスチャの解放関数*/
 	void ReleaseAllTexture();

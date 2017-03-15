@@ -18,7 +18,7 @@ LightSetting::~LightSetting()
 	ReleaseAllLight();
 }
 
-void LightSetting::Lighting(int index_, D3DXVECTOR3 direction_)
+void LightSetting::Lighting(int index_, const D3DXVECTOR3& direction_)
 {
 	m_pLight.emplace_back(New Light);
 	m_pLight[index_]->Lighting(direction_);
